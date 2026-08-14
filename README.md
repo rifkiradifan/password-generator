@@ -38,20 +38,31 @@ With a background in SRE/Cloud Engineering, I'm familiar with secrets management
 
 ## Folder Structure
 
-not yet available
+```
+password-generator/
+├── main.py
+├── pyproject.toml
+├── uv.lock
+├── .python-version
+├── .gitignore
+└── README.md
+```
 
 ---
 
 ## Installation
 
-
-not yet available
+Requires Python 3.13+ and [`uv`](https://docs.astral.sh/uv/). No manual venv setup needed — `uv run` creates and syncs `.venv` automatically on first use.
 
 ---
 
 ## How to Run
 
-not yet available
+```bash
+uv run python main.py
+```
+
+> Currently prints a single cryptographically secure random lowercase letter (`secrets.choice`). CLI flags (`--length`, charset toggles, `--count`) are still in progress — see [ROADMAP.md](ROADMAP.md).
 
 ---
 

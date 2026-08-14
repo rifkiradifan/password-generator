@@ -1,0 +1,21 @@
+# Virtual environment (dibuat otomatis oleh `uv run` / `uv venv`)
+.venv/
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# Test & tooling cache (Phase 2: pytest, mypy, ruff)
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment variables (kalau nanti ada .env asli, jangan sampai ke-commit)
+.env
+
+# Editor/OS clutter
+.vscode/
+.idea/
+Thumbs.db
