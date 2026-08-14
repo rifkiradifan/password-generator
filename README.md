@@ -60,21 +60,19 @@ Requires Python 3.13+ and [`uv`](https://docs.astral.sh/uv/). No manual venv set
 
 ```bash
 uv run python main.py
+# yyafffwtgnxf
+
+uv run python main.py --length 20
+# akvuwreziskfftvtqtyo
 ```
 
-> Currently prints a single cryptographically secure random lowercase letter (`secrets.choice`). CLI flags (`--length`, charset toggles, `--count`) are still in progress — see [ROADMAP.md](ROADMAP.md).
+> Currently generates a password from lowercase letters only, with configurable length via `--length` (default 12). Charset toggles and `--count` are still in progress — see [ROADMAP.md](ROADMAP.md).
 
 ---
 
 ## Roadmap
 
 Detailed execution roadmap is in [ROADMAP.md](ROADMAP.md).
-
----
-
-## What I learned
-
-not yet available
 
 ---
 
