@@ -9,7 +9,13 @@ A CLI to generate cryptographically secure random passwords, with configurable l
 
 ## What it does
 
-Generates random passwords using Python's `secrets` module (CSPRNG), instead of `random`, which is not safe for cryptographic purposes. Password length and character categories (uppercase, lowercase, digits, symbols) are configurable via CLI flags.
+By the end of this project:
+
+- Passwords are generated with Python's `secrets` module (CSPRNG), not `random`, which is predictable and unsafe for cryptographic purposes
+- Length, character categories (uppercase, lowercase, digits, symbols) and number of passwords are configurable via CLI flags
+- Invalid input (non-positive length, every charset disabled) fails fast with a clear message and a non-zero exit code, not a traceback
+- stdout carries only the passwords, logs and errors go to stderr, so output can be piped safely and the password value is never logged
+- Code quality is enforced by tooling: ruff + mypy for lint and types, pytest for tests, pip-audit for dependency scanning, all wired into `just check` and pre-commit
 
 ---
 
@@ -27,12 +33,13 @@ With a background in SRE/Cloud Engineering, I'm familiar with secrets management
 | Package manager | uv | |
 | CLI parsing | `argparse` (stdlib) | |
 | Random generator | `secrets` (stdlib) | CSPRNG, not `random` |
-| Linting & formatting | ruff |  |
-| Type checking | mypy | |
-| Testing | pytest | |
-| Dependency security scan | pip-audit | |
-| Pre-commit hooks | pre-commit | |
-| Task runner | Just (`Justfile`) | |
+| Logging | loguru | Writes to stderr, never logs password values |
+| Linting & formatting | ruff | Phase 2 |
+| Type checking | mypy | Phase 2 |
+| Testing | pytest + pytest-cov | Phase 2 |
+| Dependency security scan | pip-audit | Phase 2 |
+| Task runner | Just (`Justfile`) | Phase 2 |
+| Pre-commit hooks | pre-commit | Phase 2 |
 
 ---
 
