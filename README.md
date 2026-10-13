@@ -29,7 +29,7 @@ With a background in SRE/Cloud Engineering, I'm familiar with secrets management
 
 | Component | Technology | Notes |
 |---|---|---|
-| Language | Python 3.13 | |
+| Language | Python >= 3.13 | |
 | Package manager | uv | |
 | CLI parsing | `argparse` (stdlib) | |
 | Random generator | `secrets` (stdlib) | CSPRNG, not `random` |
