@@ -3,7 +3,7 @@
 A CLI to generate cryptographically secure random passwords, with configurable length and charset.
 
 
-> Status: Phase 1 ongoing.
+> Status: Phase 1 in progress (5/9 steps done). Currently generates lowercase passwords with configurable `--length`.
 
 ---
 
@@ -45,19 +45,43 @@ With a background in SRE/Cloud Engineering, I'm familiar with secrets management
 
 ## Folder Structure
 
-Not available yet.
+```
+password-generator/
+├── main.py            # CLI entry point
+├── pyproject.toml     # project metadata & dependencies
+├── uv.lock            # pinned dependency versions
+├── .python-version    # Python version used by uv
+├── ROADMAP.md
+├── README.md
+└── LICENSE
+```
 
 ---
 
 ## Installation
 
-Not available yet.
+Requires [uv](https://docs.astral.sh/uv/).
+
+```powershell
+git clone <repo-url>
+cd password-generator
+uv sync
+```
 
 ---
 
 ## How to Run
 
-Not available yet.
+```powershell
+# default length (16)
+uv run python main.py
+
+# custom length
+uv run python main.py --length 32
+
+# show all flags
+uv run python main.py --help
+```
 
 ---
 
